@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Muellim.master.cs" Inherits="TelebeQiymetSistemi.Muellim" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>İmtahan Qiymət Sistemi</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menyular</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-user"></i>
+                        Tələbələr
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="Default.aspx"><i class="glyphicon glyphicon-list"></i>Tələbə Cədvəli</a></li>
+                        <li><a href="TelebeElaveEt.aspx"><i class="glyphicon glyphicon-plus"></i>Tələbə Əlavə Et</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="DersListi.aspx">
+                        <i class="glyphicon glyphicon-book"></i>
+                        Dərslər
+                    </a>
+                  <li class="active">
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-comment"></i>
+                        Mesajlar
+                        </a>
+                     <ul class="collapse list-unstyled" id="homeSubmenu3">
+                        <li><a href="GelenMesajlar.aspx"><i class="glyphicon glyphicon-inbox"></i>Gələnlər</a></li>
+                        <li><a href="GonderilenMesajlar.aspx"><i class="glyphicon glyphicon-send"></i>Göndərilənlər</a></li>
+                         <li><a href="MesajYaz.aspx"><i class="glyphicon glyphicon-pencil"></i>Mesaj Yaz</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-bell"></i>
+                        Bildirişlər
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu2">
+                        <li><a href="BildirisListi.aspx"><i class="glyphicon glyphicon-list"></i>Bildirişlər Cədvəli</a></li>
+                        <li><a href="BildirisElaveEt.aspx"><i class="glyphicon glyphicon-plus"></i>Bildiriş Əlavə Et</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="QiymetListi.aspx">
+                        <i class="glyphicon glyphicon-check"></i>
+                        Qiymətlər
+                    </a>
+                </li>
+                <li>
+                    <a href="Statistikalar.aspx">
+                        <i class="glyphicon glyphicon-stats"></i>
+                        Statistika
+                    </a>
+                </li>
+                <li>
+                    <a href="Qrafikler.aspx">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                        Qrafiklər
+                    </a>
+                </li>
+               
+                <li>
+                    <a href="LoginPanel.aspx">
+                        <i class="glyphicon glyphicon-log-out"></i>
+                            Çıxış
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery CDN -->
+    <script src="Dosyalar1/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="Dosyalar1/js-bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
